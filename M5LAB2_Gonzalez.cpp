@@ -49,7 +49,7 @@ int main()
 double getLength()
 {
     double len;
-    cout << "enter length of rectangle: ";
+    cout << "Enter Length of Rectangle: ";
     cin >> len;
     return len;
 
@@ -58,7 +58,7 @@ double getLength()
 double getWidth()
 {
     double wid;
-    cout << "enter width of rectangle: ";
+    cout << "Enter Width of Rectangle: ";
     cin >> wid;
     return wid;
 
@@ -70,6 +70,12 @@ double getArea(double length, double width)
     return length * width;
 }
 
+void displayData(double length, double width, double area)
+{
+    cout << "length: " << length << endl;
+    cout << "width: " << width << endl;
+    cout << "A8rea: " << area << endl;
+}
 
 //***************************************************
 // TODO: write the getLength, getWidth, getArea,    *
