@@ -1,33 +1,75 @@
 //CSC 134
 //M5LAB2
 //Edith Gonzalez
-//04-13/25
+//04-13-25
 
 
 #include <iostream>
 using namespace std;
 
-void printResult(int number, int result) {
-    cout << number << " sqaured = " << result << endl;
-}
+// Declare (Write the prototypes for)
+// the getLength,
+// getWidth, getArea, and displayData
+// functions here.
 
-int square(int number) {
-    int result;
-    result = number * number;
-    return result;
-}
+double getLength(), getWidth(), getArea(double length, double width);
+void displayData(double length, double width, double area);
 
 
-int main ()
+
+
+int main()
 {
-    int count = 1;
-    int result;
-
-    while (count <= 10){
-       
-        result = square(count);
-       
-        printResult(count, result);
-        count++;
-    }
+	// This program calculates the area of a rectangle.
+	// TODO: fix any syntax errors
+	
+   double length,    // The rectangle's length
+          width,     // The rectangle's width
+          area;      // The rectangle's area
+          
+   // Get the rectangle's length.
+   
+   length = getLength();
+   
+   // Get the rectangle's width.
+   width = getWidth()
+   
+   // Get the rectangle's area.
+   area = getArea();
+   
+   // Display the rectangle's data.
+   displayData(length, width, area);
+          
+   return 0;
 }
+
+
+double getLength()
+{
+    double len;
+    cout << "enter length of rectangle: ";
+    cin >> len;
+    return len;
+
+}
+
+double getWidth()
+{
+    double wid;
+    cout << "enter width of rectangle: ";
+    cin >> wid;
+    return wid;
+
+}
+
+double getArea(double length, double width)
+
+{
+    return length * width;
+}
+
+
+//***************************************************
+// TODO: write the getLength, getWidth, getArea,    *
+// and displayData functions below.                 *
+//***************************************************
