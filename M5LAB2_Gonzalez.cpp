@@ -12,8 +12,10 @@ using namespace std;
 // getWidth, getArea, and displayData
 // functions here.
 
-double getLength(), getWidth(), getArea(double length, double width);
-void displayData(double length, double width, double area);
+double getLength();
+double getWidth();
+double getArea(double length, double width);
+void displayData(double length, double width, double area); 
 
 
 
@@ -32,10 +34,10 @@ int main()
    length = getLength();
    
    // Get the rectangle's width.
-   width = getWidth()
+   width = getWidth();
    
    // Get the rectangle's area.
-   area = getArea();
+   area = getArea(length, width);
    
    // Display the rectangle's data.
    displayData(length, width, area);
