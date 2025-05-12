@@ -6,27 +6,51 @@
 #include <iostream>
 using namespace std;
 
-void printResult(int number, int result) {
-    cout << number << " sqaured = " << result << endl;
-}
-
-int square(int number) {
-    int result;
-    result = number * number;
-    return result;
-}
-
-
-int main ()
+class Restaurant 
 {
-    int count = 1;
-    int result;
+    public:
+        void SetName(string restaurantName);
+        void SetRating(int userRating);
+        void Print();
 
-    while (count <= 10){
-       
-        result = square(count);
-       
-        printResult(count, result);
-        count++;
-    }
+    private:
+        string name;
+        int rating;
+};
+
+void Restaurant::SetName(string restaurantName)
+{
+    name = restaurantName;
+    
+}
+
+void Restaurant::SetRating(int userRating)
+{
+    rating = userRating;
+}
+
+void Restaurant::Print()
+{
+    cout << name << "---- " << rating << " Stars" << endl;
+}
+
+int main()
+{
+    cout << "Top 3 Fast Food Ratings:" << endl;
+
+    Restaurant faveRest;
+    faveRest.SetName("Bojangle's");
+    faveRest.SetRating(5);
+    faveRest.Print();
+
+    Restaurant backupRest;
+    backupRest.SetName("Subway");
+	backupRest.SetRating(4);
+	backupRest.Print();
+
+    Restaurant lastRest;
+    lastRest.SetName("Wendy's");
+    lastRest.SetRating(2);
+    lastRest.Print();
+
 }
