@@ -8,6 +8,12 @@
 #include <string> 
 using namespace std;
 
+double average_rainfall(double r1, double r2, double r3)
+{
+	return (r1 + r2 + r3) / 3.0;
+}
+
+
 int main()
 {
 
@@ -29,9 +35,9 @@ int main()
 	cout << "Enter rainfall for " << month3 << ": ";
 	cin >> rain3;
 
-	double average = (rain1 + rain2 + rain3) / 3.0;
+	double avg = average_rainfall(rain1, rain2, rain3);
 	cout << fixed << setprecision(2);
-	cout << "The average rainfall for " << month1 << ", " << month2 << ", and " << month3 << " is " << average << " inches." << endl;
+	cout << "The average rainfall for " << month1 << ", " << month2 << ", and " << month3 << " is " << avg << " inches." << endl;
 
 	return 0;
 }	
